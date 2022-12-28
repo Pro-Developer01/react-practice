@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
-import Carausel from './Components/Crausel/Carausel'
+import Carousel from './Components/carousel/carousel'
 
 export default function App() {
   return (
-    <Carausel/>
+    <Carousel/>
   )
 }
