@@ -41,23 +41,23 @@ export default function Carousel() {
     <div className="conatiner">
 
       <div className="parentConatainer">
-        <div className="sliderButtonPrev" onClick={prevSlide}>
+       {urlIndex===0?null:<div className="sliderButtonPrev" onClick={prevSlide}>
           <span> &lt;</span>
-        </div>
+        </div>} 
         <div className="slider">
           {data.length && 
               <img className='slides' src={data[urlIndex]?.url} alt={`item${urlIndex}`} />
           }
         </div>
-        <div className="sliderButtonNext" onClick={ nextSlide}>
+        {urlIndex===data.length-1?null:<div className="sliderButtonNext" onClick={ nextSlide}>
         <span>&gt;</span>
-        </div>
+        </div>}
       </div>
         <div className="dots">
           {data&& data.map((_,i)=>{
             return(
 
-              <span onClick={()=>dotHandler(i)}>.</span>
+              <span className={urlIndex===i?'dotActive':null } onClick={()=>dotHandler(i)}>.</span>
             )
           })}
          

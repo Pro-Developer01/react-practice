@@ -1,5 +1,5 @@
 .parentConatainer {
-  height: 365px;
+  height: 409px;
   width: 54%;
   margin: 0 auto;
   padding: 2px;
@@ -38,6 +38,7 @@
 .dots span {
   font-size: 91px;
   cursor: pointer;
+  opacity: 0.7;
 }
 .dots {
   display: flex;
@@ -46,8 +47,21 @@
   position: relative;
   top: -79px;
   color: blueviolet;
+ 
 
 }
+
+.dots span:hover
+{
+  opacity: 1;
+}
+
 .conatiner {
   position: relative;
+}
+
+.dotActive
+{
+  color: red;
+  opacity: 1;
 }
